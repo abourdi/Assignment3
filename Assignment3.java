@@ -34,6 +34,7 @@
 * 			Staff: Use JOptionPane to display "hello Staff"	
 * 		endcase
 * 	endwhile
+* 	Use JOptionPane to display hello and correct account
 * endif
 * End
 * 
@@ -95,30 +96,27 @@ public class Assignment3 {
 			AccountName = (String) JOptionPane.showInputDialog(null, "Choose account type...","Account Type",JOptionPane.QUESTION_MESSAGE, null,choices,choices[1]); 
 		
 			//Beginning of switch case to decide what to do based on selected account type
-			switch (AccountName) {
+			switch (CorrectChoice) {
 			
 		    //first case that occurs if Admin is correct account type
 			case "Admin":
-				if(AccountName.equals(CorrectChoice))
-				JOptionPane.showMessageDialog(null, "Hello Admin");
 				break;	
 				
 			//second case that occurs if Student is correct account type	
 			case "Student":
-				if(AccountName.equals(CorrectChoice))
-				JOptionPane.showMessageDialog(null, "Hello Student");
 				break;
 				
 			//third case that occurs if Staff is correct account type	
 			case "Staff":
-				if(AccountName.equals(CorrectChoice))
-				JOptionPane.showMessageDialog(null, "Hello Staff");
 				break;	
 				
 				} 	 
 		
 			}while (!CorrectChoice.equals(AccountName));
-	
+		
+		//Display hello and correct account to user
+		JOptionPane.showMessageDialog(null, "Hello " + AccountName);
+		
 		}
 		
 	} 
